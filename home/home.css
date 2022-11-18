@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --back: rgb(30, 33, 39);
+}
+
+body {
+    background: var(--back);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: sans-serif;
+    
+}
+
+.folder {
+    position: absolute;
+    top: 45%;
+    height: 200px;
+    width: 200px;
+    background: rgba(88, 88, 88, 0.2);
+    outline-style: solid;
+    outline-width: 10px;
+    outline-color: rgba(116, 116, 116, 0.24);
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+}
+.folder:hover {
+    background: rgba(151, 151, 151, 0.2);
+    outline-color: rgba(182, 182, 182, 0.24);
+}
+
+.folder.is-active {
+    height: 300px;
+    width: 600px;
+}
+
+.item {
+    position: relative;
+    margin: 6px;
+    top: 0px;
+    right: 50px;
+    height: 60px;
+    width: 60px;
+    transform: translate(50px, 0px);
+    background: rgb(168, 168, 168);
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.item:hover  {
+    background: #fff;
+    height: 80px;
+    width: 80px;
+}
+
+.item.is-active {
+    height:120px;
+    width: 120px;
+}
+
+.item.is-active:hover {
+    background: #fff;
+    height: 140px;
+    width: 140px;
+}
+
+.folder h1 {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translate(-45px, 0px);
+    color: white;
+}
